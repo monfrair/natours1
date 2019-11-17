@@ -1,0 +1,14 @@
+{
+  "name": "natours1",
+  "version": "1.0.0",
+  "description": "learing node.js and mongodb",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "WJHS",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
