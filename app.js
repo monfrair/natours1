@@ -55,12 +55,17 @@ err => {
             tour: newTour
         }
     });
-
-}
-);
-
-
+})
 });
+
+app.patch('/api/v1/tours/:id', (req, res) => {
+res.status(200).json({
+    status: 'success',
+    tour: '<updated tour here...>'
+})
+})
+
+
 
 
 const port = 3000;
