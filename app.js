@@ -72,10 +72,10 @@ app.delete('/api/v1/tours/:id', (req, res) => {
 });
 });
 
+// do I need this here?
+// const port = 3000;
 
-const port = 3000;
+// app.listen(port, () => {
+//     console.log(`app running on port ${port}...`);
 
-app.listen(port, () => {
-    console.log(`app running on port ${port}...`);
-
-});
+// });
