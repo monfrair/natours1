@@ -19,3 +19,5 @@ at Function.Module.\_load (internal/modules/cjs/loader.js:724:14)
 at Function.Module.runMain (internal/modules/cjs/loader.js:1025:10)
 at internal/main/run_main_module.js:17:11
 [nodemon] app crashed - waiting for file changes before starting...
+
+changes port to 5000 on both js files and the config file
