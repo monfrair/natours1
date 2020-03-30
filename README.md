@@ -1,5 +1,7 @@
 # natours1
 
+\*\*March 2019- looks like need to start from part 50, to rebuild some of the app.
+
 node.js and mongoDB project from udemy
 
 stuck here section 8, 82. All else working
