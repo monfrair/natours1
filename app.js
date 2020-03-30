@@ -9,7 +9,7 @@ const tours = JSON.parse(
   fs.readFileSync(`${__dirname}/dev-data/data/tours-simple.json`)
 );
 
-const getAllTours = (req, res) => {
+const getAllTours = (_req, res) => {
   res.status(200).json({
     status: 'success',
     results: tours.length,
