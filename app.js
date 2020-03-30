@@ -28,7 +28,13 @@ app.get('/api/v1/tours/:id', getAllTours);
 app.post('/api/v1/tours', (req, res) => {
   // console.log(req.body);
   const newId = tours[tours.length - 1].id + 1;
+<<<<<<< HEAD
   const newTour = Object.assign({ id: newId }, req.body);
+=======
+  const newTour = Object.assign({
+    id: newId
+  }, req.body);
+>>>>>>> c5495b49273c7372c99683d02022c6c46bce2c4a
 
   tours.push(newTour);
   fs.writeFile(
@@ -73,8 +79,18 @@ app.delete('/api/v1/tours/:id', (req, res) => {
   });
 });
 
+<<<<<<< HEAD
 const port = 3000;
+=======
+// do I need this here?
+const port = 5000;
+>>>>>>> c5495b49273c7372c99683d02022c6c46bce2c4a
 
 app.listen(port, () => {
   console.log(`app running on port ${port}...`);
 });
+<<<<<<< HEAD
+=======
+
+module.exports = app;
+>>>>>>> c5495b49273c7372c99683d02022c6c46bce2c4a
