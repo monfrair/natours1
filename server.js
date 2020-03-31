@@ -5,7 +5,7 @@
 // dotenv.config({
 //   path: './config.env'
 // });
-// const app = require('./app');
+const app = require('./app');
 
 // const DB = process.env.DATABASE.replace(
 //   '<PASSWORD>',
@@ -54,7 +54,7 @@
 //     console.log('ERROR', err);
 //   });
 
-// const port = process.env.PORT || 5000;
-// app.listen(port, () => {
-//   console.log(`App running on port ${port}...`);
-// });
+const port = 5000;
+app.listen(port, () => {
+  console.log(`App running on port ${port}....`);
+});
