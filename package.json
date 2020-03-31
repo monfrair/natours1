@@ -5,8 +5,10 @@
   "main": "app.js",
   "scripts": {
     "start": "nodemon server.js",
-    "start:prod": "NODE_ENV=production nodemon server.js"
+    "start:prod": "NODE_ENV=production nodemon server.js",
+    "prettier-watch": "onchange '**/*.js' -- prettier --write {{changed}}"
   },
+  
   "author": "William Sorrentino",
   "license": "ISC",
   "dependencies": {
