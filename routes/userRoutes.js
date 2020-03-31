@@ -3,6 +3,11 @@ const userController = require('./../controllers/userController');
 
 const router = express.Router();
 
+router.param('id', (req, res, next, val) => {
+  console.log(`Tour ID is: ${val}`);
+  next();
+});
+
 router
   .route('/')
   .get(userController.getAllUsers)
