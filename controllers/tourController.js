@@ -5,6 +5,7 @@ const tours = JSON.parse(
 );
 //Middleware check ID
 exports.checkID = (req, res, next, val) => {
+  console.log(`Tour id is: ${val}`);
   if (req.params.id * 1 > tours.length) {
     return res.status(404).json({
       status: 'fail',
@@ -14,7 +15,17 @@ exports.checkID = (req, res, next, val) => {
   next();
 };
 
-//Route handlers
+exports.checkBody = (req, res, next) => {
+  if (!req.body.name || !req.body.price) {
+    return res.status(400).json({
+      status: 'fail',
+      message: 'Missing name or price'
+    });
+  }
+  next();
+};
+
+//Route handlers when no ID is used
 exports.getAllTours = (req, res) => {
   console.log(req.requestTime);
   res.status(200).json({
