@@ -13,13 +13,13 @@ app.use(express.json());
 
 //global middleware declared prior to routes
 app.use((req, res, next) => {
-  console.log('Hello from middleware');
-  next();
+	console.log('Hello from middleware');
+	next();
 });
 
 app.use((req, res, next) => {
-  req.requestTime = new Date().toISOString();
-  next();
+	req.requestTime = new Date().toISOString();
+	next();
 });
 
 //Routes
@@ -30,6 +30,6 @@ app.use('/api/v1/users', userRouter);
 
 const port = 3000;
 app.listen(port, () => {
-  console.log(`App running on port ${port}....`);
+	console.log(`App running on port ${port}....`);
 });
 module.exports = app;
