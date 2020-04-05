@@ -8,27 +8,17 @@ check on ports for 5000 || 3000;
 changes port to 5000 on both js files and the config file
 
 **Catalina not allowing to mkdir data/db in usr/local/bin **
-mongo community
-usr/local/bin
+https://zellwk.com/blog/install-mongodb/
+start mongodb community: brew services run mongodb-community
+check is db is running: brew services list
+to access the mongo shell: mongo
+to stop mongodb-community running: brew services stop mongodb-community
 
-Alternative method
+create alias to make using mongodb community easier:
+alias mongod='brew services run mongodb-community'
+alias mongod-status='brew services list'
+alias mongod-stop='brew services stop mongodb-community'
 
-An alternative method is to follow the instructions at Install MongoDB Community Edition on macOS by leveraging brew:
-
-brew tap mongodb/brew
-brew install mongodb-community
-This will create some additional files by default:
-
-the configuration file (/usr/local/etc/mongod.conf)
-the log directory path (/usr/local/var/log/mongodb)
-the data directory path (/usr/local/var/mongodb)
-
-To run mongod you can either:
-
-Run the command manually from the command line (this can be aliased for convenience):
-mongod --config /usr/local/etc/mongod.conf
-Run MongoDB as a service using brew services. Note that this will run MongoDB as a standalone node (not a replica set), so features that depends on the oplog e.g. changestreams will not work unless you modify the mongod configuration file:
-brew services start mongodb-community
-
-brew tap mongodb/brew
-brew install mongodb-community
+Keep local mongo shell running for local DB use
+if issues connecting shell to cloud go to command line tools and choose have shell installed
+mongo shell to mongo cloud: mongo "mongodb+srv://cluster0-8ql3d.mongodb.net/test" --username william

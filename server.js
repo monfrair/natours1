@@ -1,5 +1,5 @@
 // // const express = require('express');
-// const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 
 dotenv.config({
@@ -11,20 +11,26 @@ const app = require('./app');
 // use log below to get all env variables
 // console.log(process.env);
 
-// const DB = process.env.DATABASE.replace(
-//   '<PASSWORD>',
-//   process.env.DATABASE_PASSWORD
-// );
+const DB = process.env.DATABASE.replace(
+  '<PASSWORD>',
+  process.env.DATABASE_PASSWORD
+);
 
-// mongoose
-//   .connect(DB, {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true,
-//     useCreateIndex: true,
-//     useFindAndModify: false
-//   })
-//   .then(() => console.log('DB connection successful!'));
+mongoose
+  // code below to connect to local DB
+  // .connect(process.env.DATABASE_LOCAL, {{)}
 
+  //Connection to cloud DB
+  .connect(DB, {
+    useNewUrlParser: true,
+    // useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false
+  })
+  .then(() => {
+    // console.log(con.connections);
+    console.log('DB connection successful!');
+  });
 // const tourSchema = new mongoose.Schema({
 //   name: {
 //     type: String,
