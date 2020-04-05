@@ -23,7 +23,7 @@ mongoose
   //Connection to cloud DB
   .connect(DB, {
     useNewUrlParser: true,
-    // useUnifiedTopology: true,
+    useUnifiedTopology: true,
     useCreateIndex: true,
     useFindAndModify: false
   })
@@ -31,28 +31,12 @@ mongoose
     // console.log(con.connections);
     console.log('DB connection successful!');
   });
-// const tourSchema = new mongoose.Schema({
-//   name: {
-//     type: String,
-//     required: [true, 'A tour must have a name'],
-//     unique: true
-//   },
-//   rating: {
-//     type: Number,
-//     default: 4.5
-//   },
-//   price: {
-//     type: Number,
-//     required: [true, 'A tour must have a price']
-//   }
-// });
 
-// const Tour = mongoose.model('Tour', tourSchema);
-
+//code to test app connection to mongo db
 // const testTour = new Tour({
-//   name: 'The Park Camper',
-//   rating: 4.7,
-//   price: 497
+//   name: 'Moab Monster',
+//   rating: 4.8,
+//   price: 797
 // });
 
 // testTour
@@ -61,7 +45,7 @@ mongoose
 //     console.log(doc);
 //   })
 //   .catch(err => {
-//     console.log('ERROR', err);
+//     console.log('ERROR 🤬', err);
 //   });
 
 const port = process.env.PORT || 3000;

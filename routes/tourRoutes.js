@@ -3,7 +3,7 @@ const tourController = require('./../controllers/tourController');
 
 const router = express.Router();
 
-router.param('id', tourController.checkID);
+// router.param('id', tourController.checkID);
 // router.param('name', tourController.checkName);
 // router.param('price', tourController.checkPrice);
 
