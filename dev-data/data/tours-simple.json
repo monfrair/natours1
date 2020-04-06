@@ -133,28 +133,5 @@
     "imageCover": "tour-9-cover.jpg",
     "images": ["tour-9-1.jpg", "tour-9-2.jpg", "tour-9-3.jpg"],
     "startDates": ["2021-12-16,10:00", "2022-01-16,10:00", "2022-12-12,10:00"]
-  },
-  { "id": 9, "name": "Test tour", "duration": 10, "difficulty": "easy" },
-  { "id": 10, "name": "Moab tour", "duration": 10, "difficulty": "hard" },
-  { "id": 11, "name": "Moab bikes", "duration": 10, "difficulty": "hard" },
-  { "id": 12, "name": "Moab bikes", "duration": 10, "difficulty": "hard" },
-  {
-    "id": 13,
-    "name": "March 2020  tour",
-    "duration": 18,
-    "difficulty": "impossible"
-  },
-  {
-    "id": 14,
-    "name": "Arizona Cruzer",
-    "duration": 15,
-    "difficulty": "impossible"
-  },
-  {
-    "id": 15,
-    "name": "Montana Madness",
-    "duration": 15,
-    "difficulty": "fun as hell"
-  },
-  { "id": 16, "name": "Moab bikes", "duration": 10, "difficulty": "hard" }
+  }
 ]
